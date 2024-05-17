@@ -1,0 +1,234 @@
+{
+  "events": [
+    {
+      "event": "call",
+      "id": 1,
+      "thread_id": 0,
+      "method_id": "connect",
+      "static": true,
+      "defined_class": "database",
+      "path": "config\\database.js",
+      "lineno": 20
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 2,
+      "parent_id": 1,
+      "return_value": {
+        "class": "Promise<undefined>",
+        "value": "Promise { undefined }",
+        "object_id": 1
+      },
+      "elapsed": 0.5729184999945574
+    },
+    {
+      "event": "call",
+      "id": 3,
+      "thread_id": 0,
+      "method_id": "cloudnairyconnect",
+      "static": true,
+      "defined_class": "cloudinary",
+      "path": "config\\cloudinary.js",
+      "lineno": 3
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 4,
+      "parent_id": 3,
+      "elapsed": 0.0007323000172618777
+    },
+    {
+      "event": "call",
+      "id": 5,
+      "thread_id": 0,
+      "method_id": "createIndex",
+      "static": false,
+      "receiver": {
+        "class": "Collection",
+        "value": "[Collection otps]",
+        "object_id": 2
+      },
+      "parameters": [
+        {
+          "class": "Object",
+          "properties": [
+            {
+              "name": "createdAt",
+              "class": "Number"
+            }
+          ],
+          "value": "{ createdAt: 1 }",
+          "object_id": 3,
+          "name": "indexSpec"
+        },
+        {
+          "class": "Object",
+          "properties": [
+            {
+              "name": "expireAfterSeconds",
+              "class": "Number"
+            },
+            {
+              "name": "background",
+              "class": "Boolean"
+            }
+          ],
+          "value": "{ expireAfterSeconds: 300, background: true }",
+          "object_id": 4,
+          "name": "options"
+        }
+      ],
+      "defined_class": "otps",
+      "lineno": 1,
+      "path": "mongodb/otps"
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 6,
+      "parent_id": 5,
+      "return_value": {
+        "class": "Promise<String>",
+        "value": "Promise { 'createdAt_1' }",
+        "object_id": 5
+      },
+      "elapsed": 0.064471500023501
+    },
+    {
+      "event": "call",
+      "id": 7,
+      "thread_id": 0,
+      "method_id": "createIndex",
+      "static": false,
+      "receiver": {
+        "class": "Collection",
+        "value": "[Collection ratingandreviews]",
+        "object_id": 6
+      },
+      "parameters": [
+        {
+          "class": "Object",
+          "properties": [
+            {
+              "name": "course",
+              "class": "Number"
+            }
+          ],
+          "value": "{ course: 1 }",
+          "object_id": 7,
+          "name": "indexSpec"
+        },
+        {
+          "class": "Object",
+          "properties": [
+            {
+              "name": "background",
+              "class": "Boolean"
+            }
+          ],
+          "value": "{ background: true }",
+          "object_id": 8,
+          "name": "options"
+        }
+      ],
+      "defined_class": "ratingandreviews",
+      "lineno": 2,
+      "path": "mongodb/ratingandreviews"
+    },
+    {
+      "event": "return",
+      "thread_id": 0,
+      "id": 8,
+      "parent_id": 7,
+      "return_value": {
+        "class": "Promise<String>",
+        "value": "Promise { 'course_1' }",
+        "object_id": 9
+      },
+      "elapsed": 0.0837625999993179
+    }
+  ],
+  "version": "1.12",
+  "metadata": {
+    "client": {
+      "name": "appmap-node",
+      "version": "2.21.1",
+      "url": "https://github.com/getappmap/appmap-node"
+    },
+    "language": {
+      "name": "javascript",
+      "engine": "Node.js",
+      "version": "v18.17.0"
+    },
+    "app": "server",
+    "recorder": {
+      "type": "process",
+      "name": "process"
+    },
+    "name": "2024-05-16T08:28:29.687Z"
+  },
+  "classMap": [
+    {
+      "name": "config",
+      "type": "package",
+      "children": [
+        {
+          "type": "class",
+          "name": "cloudinary",
+          "children": [
+            {
+              "type": "function",
+              "name": "cloudnairyconnect",
+              "static": true,
+              "location": "config\\cloudinary.js:3"
+            }
+          ]
+        },
+        {
+          "type": "class",
+          "name": "database",
+          "children": [
+            {
+              "type": "function",
+              "name": "connect",
+              "static": true,
+              "location": "config\\database.js:20"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "mongodb",
+      "type": "package",
+      "children": [
+        {
+          "type": "class",
+          "name": "otps",
+          "children": [
+            {
+              "type": "function",
+              "name": "createIndex",
+              "static": false,
+              "location": "mongodb/otps:1"
+            }
+          ]
+        },
+        {
+          "type": "class",
+          "name": "ratingandreviews",
+          "children": [
+            {
+              "type": "function",
+              "name": "createIndex",
+              "static": false,
+              "location": "mongodb/ratingandreviews:2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
